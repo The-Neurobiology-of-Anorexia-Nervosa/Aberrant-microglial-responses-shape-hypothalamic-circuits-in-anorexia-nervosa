@@ -1,0 +1,13 @@
+rnaseq:
+  counts_neuron: "rnaseq/counts.tsv"
+  counts_microglia: "rnaseq/counts.tsv"
+  metadata: "rnaseq/sample_metadata.csv"
+
+spatial:
+  counts: "spatial/counts.tsv.gz"
+  metadata: "spatial/roi_metadata.csv"
+
+microglia_states:
+  ipsc_deg: "derived/ipsc_microglia/deg_AN_vs_CTRL_deseq2.csv"
+  mouse_markers: "public/McCarroll_2018/cluster_markers.tsv"
+  human_markers: "public/human_microglia/cluster_markers.tsv"

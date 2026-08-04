@@ -1,0 +1,29 @@
+# R and RStudio
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Local computer-specific configuration
+config/paths_local.yml
+
+# Large sequencing data
+*.fastq
+*.fastq.gz
+*.bam
+*.cram
+*.h5
+*.h5ad
+
+# Large intermediate R objects
+*.rds
+*.RDS
+
+# Temporary files
+tmp/
+cache/
+*.log
+
+# Operating-system files
+.DS_Store
+Thumbs.db

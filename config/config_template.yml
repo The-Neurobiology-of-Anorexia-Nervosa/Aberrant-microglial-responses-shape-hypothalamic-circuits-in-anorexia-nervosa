@@ -1,0 +1,5 @@
+# Copy this file to paths_local.yml.
+# Replace the example path with the data location on your computer.
+# Do not commit paths_local.yml to GitHub.
+
+data_root: "/path/to/manuscript_data"
