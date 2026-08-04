@@ -137,3 +137,10 @@ fgsea_enrich_plot=function(df,subtitle){
   
   return(plot)
 }
+
+## small function used to join multiple fisher / fgsea results in a single df in visualize scripts
+AppendMe <- function(dfNames) {
+  do.call(rbind, lapply(dfNames, function(x) {
+    cbind(get(x), source = x)
+  }))
+}
