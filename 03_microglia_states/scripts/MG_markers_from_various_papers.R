@@ -6,6 +6,9 @@ library(gprofiler2)
 
 ## Dolan (iPSC Microglia in vitro)
 ## https://www.nature.com/articles/s41590-023-01558-2
+## below file is supplementry table 2
+## file link: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41590-023-01558-2/MediaObjects/41590_2023_1558_MOESM3_ESM.csv
+
 dolan=read.csv("dolan_iMG_invitro_markers.csv")
 dolan_up=dolan[dolan$avg_logFC > 0, ]
 dolan_down=dolan[dolan$avg_logFC < 0, ]
@@ -28,6 +31,7 @@ names(dolan_markers)=
 
 ### New paper
 ### https://doi.org/10.1038/s41590-026-02472-z
+### seurat markers from file: https://zenodo.org/records/16938034/files/markers_mouse_myeloid_cells_clusterwise_top20.csv?download=1
 
 # mouse MG marker set from seurat table (fig 5)
 ##below mapping was created looking at the cluster plot in paper figure 5a

@@ -22,7 +22,7 @@ run_fgsea <- function(deg_df, markers_list,
   fgsea::fgsea(
     pathways = markers_list,
     stats = ranks,
-    nPermSimple = 10000
+    nPermSimple = 1000000
   )
 }
 
@@ -38,7 +38,13 @@ fgsea_enrich_plot=function(df,subtitle){
            aes(x = -log10(padj),
                y = reorder(pathway, -log10(padj)),
                color = NES)) +
-    scale_color_gradient(low = "skyblue", high = "red")+
+    scale_color_gradient2(
+      low = "blue",
+      mid = "grey80",
+      high = "red",
+      midpoint = 0
+    )+           
+    #scale_color_gradient(low = "skyblue", high = "red")+
     #scale_color_viridis_c(option = "plasma")+
     geom_point(size = 2) +
     geom_vline(xintercept = -log10(0.05),
